@@ -1,0 +1,615 @@
+$mainBackground: rgb(224, 224, 224);
+$fontSizeText: 27px;
+$shadow: 6px 10px 15px 5px rgb(141, 141, 141);
+$colorHoverLink: lighten(black, 40%);
+$transition: 0.3s;
+$scaleHover: 1.1;
+$fontSizeHeader: 20px;
+$borderRadius: 40px;
+$animationCover: 1.5s ease-out forwards;
+$blockBackground: rgb(170, 170, 170);
+$backgroundReview: rgb(224, 224, 224);
+$widthGridPrice: 1100px;
+
+@mixin sectionPadding ($top, $left, $bottom, $right) {
+    padding: $top $left $bottom $right;
+}
+
+@mixin buttonCover() {
+    border: 3px solid black;
+    padding: 15px;
+    border-radius: $borderRadius;
+    font-size: 30px;
+}
+
+@mixin inputStyle($backgroundInput) {
+    width: 500px;
+    height: 50px;
+    border-radius: 30px;
+    text-align: center;
+    margin: 18px 0px;
+    box-shadow: 5px 5px 5px rgb(141, 141, 141);
+    font-size: 20px;
+    background-color: $backgroundInput;
+}
+
+@mixin serviceCard() {
+    font-size: 23px;
+    padding: 20px;
+    border-radius: 20px;
+    transition: $transition;
+}
+
+
+body {
+    background: $mainBackground;
+    font-family: sans-serif;
+    color: hwb(0 0% 100%);
+    overflow-x: hidden;
+}
+
+.header {
+    .header-block {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+
+        .logo-header__img_80x80 {
+            padding: 10px 0px;
+            width: 80px;
+            border-radius: 50%;
+        }
+
+        .navigation-header {
+            .header-nav {
+                .header-nav__a_20px {
+                    font-size: $fontSizeHeader;
+                    margin-left: 15px;
+                    transition: $transition;
+
+                    &:first-child {
+                        margin: 0;
+                    }
+
+                    &:hover {
+                        color: $colorHoverLink;
+                    }
+                }
+            }
+        }
+
+        .contact-header {
+            .contact-header__text_20px {
+                font-size: $fontSizeHeader;
+            }
+        }
+    }
+}
+
+.cover {
+    .cover-block {
+        padding: 50px 250px 0px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        .title-and-button {
+            animation: title-and-button $animationCover;
+            padding-right: 70px;
+
+            @keyframes title-and-button {
+                0% {
+                    position: relative;
+                    right: 100%;
+                }
+
+                100% {
+                    position: relative;
+                    right: 0px;
+                }
+            }
+
+            .title-block__text_70px {
+                font-size: 70px;
+            }
+
+            .button-block {
+                display: flex;
+                margin-top: 40px;
+            }
+
+            .button-block1__button_border {
+                @include buttonCover();
+            }
+
+            .button-block2__button_no-border {
+                @include buttonCover();
+                background-color: black;
+                margin-left: 10px;
+                color: rgb(224, 224, 224);
+            }
+        }
+
+        .image-block {
+            animation: image-block $animationCover;
+
+            @keyframes image-block {
+                0% {
+                    position: relative;
+                    left: 100%;
+                }
+
+                100% {
+                    position: relative;
+                    left: 0px;
+                }
+            }
+        }
+
+        .image-block__image_bbl-radius200px {
+            border-bottom-left-radius: 200px;
+        }
+    }
+}
+
+
+.subtitle {
+    text-align: center;
+    margin-bottom: 35px;
+    font-weight: bolder;
+    font-size: 42px;
+}
+
+.about-us {
+    .about-us-block {
+        @include sectionPadding(200px, 250px, 0px, 250px);
+
+        .description-company__text_27px {
+            font-size: $fontSizeText;
+        }
+
+        .statistics-list_flex {
+            font-size: $fontSizeText;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin: 40px 0px;
+        }
+
+        span {
+            margin: 0px 15px;
+            width: 8px;
+            height: 8px;
+            background-color: red;
+            border-radius: 50%;
+        }
+    }
+
+    .advantages-block {
+        @include sectionPadding(200px, 250px, 0px, 250px);
+
+        .advantages_grid {
+            border-left: 3px red solid;
+            display: grid;
+            grid-template: repeat(3, 1fr) / repeat(2, 1fr);
+            gap: 40px;
+            padding-left: 27px;
+
+            .advantages__text_27px {
+                font-size: $fontSizeText;
+            }
+        }
+    }
+
+    .photos-work-block {
+        @include sectionPadding(200px, 250px, 0px, 250px);
+        position: relative;
+
+        .swiper {
+            width: 1000px;
+            border-radius: $borderRadius;
+            box-shadow: $shadow;
+        }
+
+        .swiper-slide {
+            & img {
+                width: 100%;
+                height: 600px;
+                display: block;
+            }
+        }
+
+        .swiper-button-next {
+            transition: $transition;
+
+            &:hover {
+                transform: scale($scaleHover);
+            }
+        }
+
+        .swiper-button-prev {
+            transition: $transition;
+
+            &:hover {
+                transform: scale($scaleHover);
+            }
+        }
+
+        .swiper-pagination {
+            position: absolute;
+        }
+    }
+
+    .reviews-block {
+        @include sectionPadding(200px, 250px, 0px, 250px);
+
+        .reviews {
+            display: flex;
+            justify-content: space-between;
+            background-color: $blockBackground;
+            box-shadow: $shadow;
+            padding: 80px;
+            border-radius: $borderRadius;
+        }
+
+        .review {
+            width: 260px;
+            font-size: $fontSizeText;
+        }
+
+        .review__title_30px {
+            font-size: 30px;
+            padding: 10px;
+            border-radius: 20px;
+            position: relative;
+            top: 20px;
+            left: 30px;
+            background-color: $blockBackground;
+            width: fit-content;
+            border: 3px solid $backgroundReview;
+        }
+
+        .review__text_27px {
+            background: $backgroundReview;
+            padding: 30px;
+            height: 320px;
+            border-radius: 20px;
+            text-align: center;
+        }
+    }
+}
+
+.price-list {
+    @include sectionPadding(200px, 250px, 0px, 250px);
+
+
+    .price-list-block {
+        .subtitle-in-price_mt20 {
+            font-size: 34px;
+            position: relative;
+            left: 250px;
+            margin-top: 100px;
+        }
+
+        .price_flex {
+            display: flex;
+            justify-content: center;
+        }
+
+        .price-of-ceilings_grid {
+            display: grid;
+            grid-template: repeat(2, 1fr) / repeat(4, 1fr);
+            gap: 50px;
+            padding-top: 20px;
+            width: $widthGridPrice;
+        }
+
+        .service-card {
+            @include serviceCard();
+            height: 190px;
+
+            &:hover {
+                background-color: $blockBackground;
+            }
+        }
+
+        .service-card__subtitle {
+            padding-top: 15px;
+        }
+
+        .service-card__button_pop-up {
+            position: relative;
+            top: calc(15px * 2);
+            border: 3px solid black;
+            padding: 10px;
+            border-radius: $borderRadius;
+            transition: $transition;
+
+            &:hover {
+                color: $colorHoverLink;
+            }
+        }
+
+        .price-of-added-service_grid {
+            display: grid;
+            grid-template: repeat(3, 1fr) / repeat(3, 1fr);
+            gap: 50px;
+            padding-top: 20px;
+            width: $widthGridPrice;
+        }
+
+        .service-card_h-auto {
+            @include serviceCard();
+
+            &:hover {
+                background-color: $blockBackground;
+            }
+        }
+    }
+}
+
+.calculator {
+    @include sectionPadding(100px, 250px, 100px, 250px);
+    margin-top: 200px;
+    width: 100%;
+    background-color: $blockBackground;
+
+    .calculator_flex {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .calculator-form__text {
+        font-size: $fontSizeText;
+    }
+
+    .calculator-form__select_shadow {
+        @include inputStyle(whitesmoke);
+    }
+
+    .calculator-form__input_shadow {
+        @include inputStyle(whitesmoke);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .calculator-form__button_gray {
+        @include inputStyle(gray);
+        display: block;
+        color: whitesmoke;
+        transition: $transition;
+        box-shadow: none;
+
+        &:hover {
+            background-color: darken(gray, 20%);
+        }
+    }
+}
+
+.contact {
+    @include sectionPadding(200px, 250px, 200px, 250px);
+
+    .contact-block {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .contact-card {
+        text-align: center;
+
+        .contact-card__image {
+            width: 170px;
+        }
+
+        .contact-card__text {
+            font-size: $fontSizeText;
+            margin: 18px 0px;
+        }
+
+        .contact-card__link {
+            font-size: $fontSizeText;
+            text-decoration: underline 1px;
+        }
+    }
+}
+
+.footer {
+    margin: 0px 20px;
+    padding: 30px 20px;
+    border-top: 3px solid rgb(59, 57, 57);
+    height: 200px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: $fontSizeHeader;
+
+    .logo-footer__text {
+        &:last-child {
+            margin-top: 10px;
+            font-size: 35px;
+        }
+    }
+
+    .navigation-footer-list__item_no-circle {
+        margin-top: 10px;
+        transition: $transition;
+
+        &:first-child {
+            margin: 0;
+        }
+
+        &:hover {
+            color: $colorHoverLink;
+        }
+    }
+
+    .contact-footer {
+        width: 200px;
+    }
+
+    .contact-footer-image-block_flex {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 10px;
+
+        .contact-footer-image-block__image {
+            width: 50px;
+        }
+
+        .contact-card__image1 {
+            animation: img-contact-footer1 3.5s infinite;
+        }
+
+        .contact-card__image2 {
+            animation: img-contact-footer2 3.5s infinite;
+        }
+
+        .contact-card__image3 {
+            animation: img-contact-footer3 3.5s infinite;
+        }
+
+        @keyframes img-contact-footer1 {
+            0% {
+                transform: scale(1.0);
+            }
+
+            10% {
+                transform: scale(1.2);
+            }
+
+            20% {
+                transform: scale(1.0);
+            }
+        }
+
+        @keyframes img-contact-footer2 {
+            0% {
+                transform: scale(1.0);
+            }
+
+            30% {
+                transform: scale(1.0);
+            }
+
+            40% {
+                transform: scale(1.2);
+            }
+
+            50% {
+                transform: scale(1.0);
+            }
+        }
+
+        @keyframes img-contact-footer3 {
+            60% {
+                transform: scale(1.0);
+            }
+
+            70% {
+                transform: scale(1.2);
+            }
+
+            80% {
+                transform: scale(1.0);
+            }
+        }
+    }
+}
+
+
+
+// pop-up блоки
+
+.popup {
+    position: fixed;
+    top: 10%;
+    left: 20%;
+    right: 20%;
+    width: auto;
+    background: rgb(255, 255, 255);
+    border-radius: 20px;
+    box-shadow: 6px 10px 15px 5px rgb(48, 48, 48);
+    z-index: 99999;
+    overflow-x: hidden;
+}
+
+.stars-block_pop-up,
+.pvh-block_pop-up,
+.tkan-block_pop-up,
+.satin-block_pop-up,
+.matov-block_pop-up,
+.cvet-block_pop-up,
+.glanc-block_pop-up {
+    display: none;
+}
+
+.stars-block_pop-up:before,
+.pvh-block_pop-up:before,
+.tkan-block_pop-up:before,
+.satin-block_pop-up:before,
+.matov-block_pop-up:before,
+.cvet-block_pop-up:before,
+.glanc-block_pop-up:before {
+    content: '';
+    background: #000;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0.7;
+    z-index: 9999;
+}
+
+.popup-close-block {
+    display: flex;
+    justify-content: right;
+    align-items: center;
+
+    .popup-close {
+        margin: 10px;
+        width: 50px;
+        transition: $transition;
+
+        &:hover {
+            transform: scale($scaleHover);
+        }
+    }
+}
+
+.cover-popup {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px 38px;
+
+    & div {
+        width: 400px;
+    }
+
+    & h1 {
+        font-size: 42px;
+    }
+
+    & h2 {
+        font-size: 30px;
+        padding-top: 20px;
+    }
+}
+
+.popup-img {
+    width: 500px;
+    border-radius: $borderRadius;
+    box-shadow: $shadow;
+}
+
+.popup-text {
+    font-size: $fontSizeText;
+    padding: 70px 38px;
+
+    & p:last-child {
+        margin-top: 40px;
+    }
+}
