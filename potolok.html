@@ -261,7 +261,7 @@
                                 </div>
                                 <div class="service-card_h-auto">
                                     <h3 class="service-card__title">Монтаж на сложную поверхность</h3>
-                                    <h4 class="service-card__subtitle">150-500 руб/м.п.</h4>
+                                    <h4 class="service-card__subtitle">300 руб/м.п.</h4>
                                 </div>
                                 <div class="service-card_h-auto">
                                     <h3 class="service-card__title">Монтаж электропроводки</h3>
@@ -302,15 +302,65 @@
                             id="calculator-sizes" min="2" max="40000" required>
                         <p class="calculator-form__text">Доп. услуги:</p>
                         <a href="#" class="calculator-form__input_shadow">Выбрать...</a>
-
+                        <!-- pop-up окно с выбором доп. услуг -->
                         <div>
                             <div>
-                                <input type="checkbox" id="Lustra-calc">
-                                <p>Снятие/установка люстры</p>
-                                <input type="number" id="lustra-calc__quanity">
+                                <div>
+                                    <input type="checkbox" id="lustra-calc">
+                                    <p>Снятие/установка люстры</p>
+                                    <input type="number" id="lustra-calc__quanity">
+                                    <p>шт.</p>
+                                </div>
+                                <div>
+                                    <input type="checkbox" id="carniz-calc">
+                                    <p>Установка карниза</p>
+                                    <input type="number" id="carniz-calc__quanity">
+                                    <p>м.п.</p>
+                                </div>
+                                <div>
+                                    <input type="checkbox" id="demontazh-calc">
+                                    <p>Демонтаж старого полотна</p>
+                                    <input type="number" id="demontazh-calc__quanity">
+                                    <p>м.п.</p>
+                                </div>
+                                <div>
+                                    <input type="checkbox" id="brus-calc">
+                                    <p>Установка бруса</p>
+                                    <input type="number" id="brus-calc__quanity">
+                                    <p>м.п.</p>
+                                </div>
+                                <div>
+                                    <input type="checkbox" id="ugol-calc">
+                                    <p>Дополнительный угол</p>
+                                    <input type="number" id="ugol-calc__quanity">
+                                    <p>м.п.</p>
+                                </div>
+                                <div>
+                                    <input type="checkbox" id="criv-uchastock-calc">
+                                    <p>Криволинейный участок</p>
+                                    <input type="number" id="criv-uchastock-calc__quanity">
+                                    <p>м.п.</p>
+                                </div>
+                                <div>
+                                    <input type="checkbox" id="poverhnost-calc">
+                                    <p>Монтаж на сложную поверхность</p>
+                                    <input type="number" id="poverhnost-calc__quanity">
+                                    <p>м.п.</p>
+                                </div>
+                                <div>
+                                    <input type="checkbox" id="provodka-calc">
+                                    <p>Монтаж электропроводки</p>
+                                    <input type="number" id="provodka-calc__quanity">
+                                    <p>точка</p>
+                                </div>
+                                <div>
+                                    <input type="checkbox" id="truba-calc">
+                                    <p>Обход трубы с окантовкой</p>
+                                    <input type="number" id="truba-calc__quanity">
+                                    <p>шт.</p>
+                                </div>
                             </div>
                         </div>
-                        
                         <button type="submit" class="calculator-form__button_gray">Рассчитать</button>
                     </form>
                     <div>
