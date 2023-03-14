@@ -40,6 +40,13 @@ $widthGridPrice: 1100px;
     transition: $transition;
 }
 
+@mixin buttonSwiper() {
+    transition: $transition;
+    color: $mainBackground;
+    height: 40px;
+    border-radius: 50%;
+    overflow: hidden;
+}
 
 body {
     background: $mainBackground;
@@ -220,16 +227,14 @@ body {
         }
 
         .swiper-button-next {
-            transition: $transition;
-
+            @include buttonSwiper();
             &:hover {
                 transform: scale($scaleHover);
             }
         }
 
         .swiper-button-prev {
-            transition: $transition;
-
+            @include buttonSwiper();
             &:hover {
                 transform: scale($scaleHover);
             }
@@ -237,6 +242,9 @@ body {
 
         .swiper-pagination {
             position: absolute;
+            background-color: $mainBackground;
+            border-radius: $borderRadius;
+            padding: 5px 0px;
         }
     }
 

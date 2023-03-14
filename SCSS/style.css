@@ -145,18 +145,29 @@ body {
 }
 .about-us .photos-work-block .swiper-button-next {
   transition: 0.3s;
+  color: rgb(224, 224, 224);
+  height: 40px;
+  border-radius: 50%;
+  overflow: hidden;
 }
 .about-us .photos-work-block .swiper-button-next:hover {
   transform: scale(1.1);
 }
 .about-us .photos-work-block .swiper-button-prev {
   transition: 0.3s;
+  color: rgb(224, 224, 224);
+  height: 40px;
+  border-radius: 50%;
+  overflow: hidden;
 }
 .about-us .photos-work-block .swiper-button-prev:hover {
   transform: scale(1.1);
 }
 .about-us .photos-work-block .swiper-pagination {
   position: absolute;
+  background-color: rgb(224, 224, 224);
+  border-radius: 40px;
+  padding: 5px 0px;
 }
 .about-us .reviews-block {
   padding: 200px 250px 0px 250px;
