@@ -137,10 +137,10 @@ body {
   width: 1000px;
   border-radius: 40px;
   box-shadow: 6px 10px 15px 5px rgb(141, 141, 141);
+  height: 600px;
 }
 .about-us .photos-work-block .swiper-slide img {
   width: 100%;
-  height: 600px;
   display: block;
 }
 .about-us .photos-work-block .swiper-button-next {
