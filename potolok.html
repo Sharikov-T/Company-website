@@ -286,7 +286,7 @@
                 <div class="calculator_flex">
                     <form name="calculator-form" autocomplete="off">
                         <p class="calculator-form__text">Выберите вид потолка:</p>
-                        <select id="calculator-select" class="calculator-form__select_shadow" required>
+                        <select id="calculator-potolok" class="calculator-form__select_shadow" required>
                             <option value="">-- Не выбрано --</option>
                             <option value="">Звёздное небо</option>
                             <option value="">ПВХ</option>
@@ -302,6 +302,15 @@
                             id="calculator-sizes" min="2" max="40000" required>
                         <p class="calculator-form__text">Доп. услуги:</p>
                         <a href="#" class="calculator-form__input_shadow">Выбрать...</a>
+
+                        <div>
+                            <div>
+                                <input type="checkbox" id="Lustra-calc">
+                                <p>Снятие/установка люстры</p>
+                                <input type="number" id="lustra-calc__quanity">
+                            </div>
+                        </div>
+                        
                         <button type="submit" class="calculator-form__button_gray">Рассчитать</button>
                     </form>
                     <div>
