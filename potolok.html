@@ -287,15 +287,15 @@
                     <form name="calculator-form" autocomplete="off">
                         <p class="calculator-form__text">Выберите вид потолка:</p>
                         <select id="calculator-potolok" class="calculator-form__select_shadow" required>
-                            <option value="">-- Не выбрано --</option>
-                            <option value="">Звёздное небо</option>
-                            <option value="">ПВХ</option>
-                            <option value="">Тканевый</option>
-                            <option value="">Сатиновый</option>
-                            <option value="">Матовый</option>
-                            <option value="">Цветной</option>
-                            <option value="">Глянцевый</option>
-                            <option value="">С подсветкой</option>
+                            <option value="none">-- Не выбрано --</option>
+                            <option value="звёздное">Звёздное небо</option>
+                            <option value="пвх">ПВХ</option>
+                            <option value="тканевый">Тканевый</option>
+                            <option value="сатиновый">Сатиновый</option>
+                            <option value="матовый">Матовый</option>
+                            <option value="цветной">Цветной</option>
+                            <option value="глянцевый">Глянцевый</option>
+                            <option value="подсветка">С подсветкой</option>
                         </select>
                         <p class="calculator-form__text">Введите необходимый размер в м2:</p>
                         <input type="number" placeholder="м2/п.м." class="calculator-form__input_shadow"
@@ -305,68 +305,70 @@
                         <!-- pop-up окно с выбором доп. услуг -->
                         <div>
                             <div>
+                                <label for="added-service-calc"></label>
                                 <div>
-                                    <input type="checkbox" id="lustra-calc">
+                                    <input type="checkbox" id="added-service-calc" value="люстра">
                                     <p>Снятие/установка люстры</p>
                                     <input type="number" id="lustra-calc__quanity">
                                     <p>шт.</p>
                                 </div>
                                 <div>
-                                    <input type="checkbox" id="carniz-calc">
+                                    <input type="checkbox" id="added-service-calc" value="карниз">
                                     <p>Установка карниза</p>
                                     <input type="number" id="carniz-calc__quanity">
                                     <p>м.п.</p>
                                 </div>
                                 <div>
-                                    <input type="checkbox" id="demontazh-calc">
+                                    <input type="checkbox" id="added-service-calc" value="демонтаж">
                                     <p>Демонтаж старого полотна</p>
                                     <input type="number" id="demontazh-calc__quanity">
                                     <p>м.п.</p>
                                 </div>
                                 <div>
-                                    <input type="checkbox" id="brus-calc">
+                                    <input type="checkbox" id="added-service-calc" value="брус">
                                     <p>Установка бруса</p>
                                     <input type="number" id="brus-calc__quanity">
                                     <p>м.п.</p>
                                 </div>
                                 <div>
-                                    <input type="checkbox" id="ugol-calc">
+                                    <input type="checkbox" id="added-service-calc" value="угол">
                                     <p>Дополнительный угол</p>
                                     <input type="number" id="ugol-calc__quanity">
                                     <p>м.п.</p>
                                 </div>
                                 <div>
-                                    <input type="checkbox" id="criv-uchastock-calc">
+                                    <input type="checkbox" id="added-service-calc" value="кривой_участок">
                                     <p>Криволинейный участок</p>
                                     <input type="number" id="criv-uchastock-calc__quanity">
                                     <p>м.п.</p>
                                 </div>
                                 <div>
-                                    <input type="checkbox" id="poverhnost-calc">
+                                    <input type="checkbox" id="added-service-calc" value="поверхность">
                                     <p>Монтаж на сложную поверхность</p>
                                     <input type="number" id="poverhnost-calc__quanity">
                                     <p>м.п.</p>
                                 </div>
                                 <div>
-                                    <input type="checkbox" id="provodka-calc">
+                                    <input type="checkbox" id="added-service-calc" value="проводка">
                                     <p>Монтаж электропроводки</p>
                                     <input type="number" id="provodka-calc__quanity">
                                     <p>точка</p>
                                 </div>
                                 <div>
-                                    <input type="checkbox" id="truba-calc">
+                                    <input type="checkbox" id="added-service-calc" value="труба">
                                     <p>Обход трубы с окантовкой</p>
                                     <input type="number" id="truba-calc__quanity">
                                     <p>шт.</p>
                                 </div>
                             </div>
                         </div>
-                        <button type="submit" class="calculator-form__button_gray">Рассчитать</button>
+                        <button type="button" class="calculator-form__button_gray" onClick="calculator()">Рассчитать</button>
                     </form>
                     <div>
                         <p class="calculator-form__text">Стоимость:</p>
-                        <input type="text" class="calculator-form__input_shadow" readonly>
+                        <p class="calculator-form__input_shadow" id="priceCalc"></p>
                     </div>
+                    <script src="JS/calc.js"></script>
                 </div>
             </div>
         </section>
