@@ -301,68 +301,78 @@
                         <input type="number" placeholder="м2/п.м." class="calculator-form__input_shadow"
                             id="calculator-sizes" min="2" max="40000" required>
                         <p class="calculator-form__text">Доп. услуги:</p>
-                        <a href="#" class="calculator-form__input_shadow">Выбрать...</a>
+                        <a href="#" class="calculator-form__input_shadow popup-open-calc">Выбрать...</a>
                         <!-- pop-up окно с выбором доп. услуг -->
-                        <div>
-                            <div>
-                                <label for="added-service-calc"></label>
+                        <div class="calc-block_popup">
+                            <div class="popup">
                                 <div>
-                                    <input type="checkbox" id="added-service-calc" value="люстра">
-                                    <p>Снятие/установка люстры</p>
-                                    <input type="number" id="lustra-calc__quanity">
-                                    <p>шт.</p>
-                                </div>
-                                <div>
-                                    <input type="checkbox" id="added-service-calc" value="карниз">
-                                    <p>Установка карниза</p>
-                                    <input type="number" id="carniz-calc__quanity">
-                                    <p>м.п.</p>
-                                </div>
-                                <div>
-                                    <input type="checkbox" id="added-service-calc" value="демонтаж">
-                                    <p>Демонтаж старого полотна</p>
-                                    <input type="number" id="demontazh-calc__quanity">
-                                    <p>м.п.</p>
-                                </div>
-                                <div>
-                                    <input type="checkbox" id="added-service-calc" value="брус">
-                                    <p>Установка бруса</p>
-                                    <input type="number" id="brus-calc__quanity">
-                                    <p>м.п.</p>
-                                </div>
-                                <div>
-                                    <input type="checkbox" id="added-service-calc" value="угол">
-                                    <p>Дополнительный угол</p>
-                                    <input type="number" id="ugol-calc__quanity">
-                                    <p>м.п.</p>
-                                </div>
-                                <div>
-                                    <input type="checkbox" id="added-service-calc" value="кривой_участок">
-                                    <p>Криволинейный участок</p>
-                                    <input type="number" id="criv-uchastock-calc__quanity">
-                                    <p>м.п.</p>
-                                </div>
-                                <div>
-                                    <input type="checkbox" id="added-service-calc" value="поверхность">
-                                    <p>Монтаж на сложную поверхность</p>
-                                    <input type="number" id="poverhnost-calc__quanity">
-                                    <p>м.п.</p>
-                                </div>
-                                <div>
-                                    <input type="checkbox" id="added-service-calc" value="проводка">
-                                    <p>Монтаж электропроводки</p>
-                                    <input type="number" id="provodka-calc__quanity">
-                                    <p>точка</p>
-                                </div>
-                                <div>
-                                    <input type="checkbox" id="added-service-calc" value="труба">
-                                    <p>Обход трубы с окантовкой</p>
-                                    <input type="number" id="truba-calc__quanity">
-                                    <p>шт.</p>
+                                    <div class="popup-close-block">
+                                        <a href="#"><img src="Фотографии/close.png" class="popup-close" alt="закрыть"></a>
+                                    </div>
+                                    <div class="cover-popup-block cover-popup-block-calc">
+                                        <div class="calc-card-block__grid">
+                                            <label for="added-service-calc" class="label__disNone"></label>
+                                            <div class="calculator-card">
+                                                <input type="checkbox" id="added-service-calc" value="люстра" class="calculator-card__checkbox">
+                                                <p>Снятие/установка люстры</p>
+                                                <input type="number" id="lustra-calc__quanity" class="calculator-card__input-number">
+                                                <p>шт.</p>
+                                            </div>
+                                            <div class="calculator-card">
+                                                <input type="checkbox" id="added-service-calc" value="карниз" class="calculator-card__checkbox">
+                                                <p>Установка карниза</p>
+                                                <input type="number" id="carniz-calc__quanity" class="calculator-card__input-number">
+                                                <p>м.п.</p>
+                                            </div>
+                                            <div class="calculator-card">
+                                                <input type="checkbox" id="added-service-calc" value="демонтаж" class="calculator-card__checkbox">
+                                                <p>Демонтаж старого полотна</p>
+                                                <input type="number" id="demontazh-calc__quanity" class="calculator-card__input-number">
+                                                <p>м.п.</p>
+                                            </div>
+                                            <div class="calculator-card">
+                                                <input type="checkbox" id="added-service-calc" value="брус" class="calculator-card__checkbox">
+                                                <p>Установка бруса</p>
+                                                <input type="number" id="brus-calc__quanity" class="calculator-card__input-number">
+                                                <p>м.п.</p>
+                                            </div>
+                                            <div class="calculator-card">
+                                                <input type="checkbox" id="added-service-calc" value="угол" class="calculator-card__checkbox">
+                                                <p>Дополнительный угол</p>
+                                                <input type="number" id="ugol-calc__quanity" class="calculator-card__input-number">
+                                                <p>м.п.</p>
+                                            </div>
+                                            <div class="calculator-card">
+                                                <input type="checkbox" id="added-service-calc" value="кривой_участок" class="calculator-card__checkbox">
+                                                <p>Криволинейный участок</p>
+                                                <input type="number" id="criv-uchastock-calc__quanity" class="calculator-card__input-number">
+                                                <p>м.п.</p>
+                                            </div>
+                                            <div class="calculator-card">
+                                                <input type="checkbox" id="added-service-calc" value="поверхность" class="calculator-card__checkbox">
+                                                <p>Монтаж на сложную поверхность</p>
+                                                <input type="number" id="poverhnost-calc__quanity" class="calculator-card__input-number">
+                                                <p>м.п.</p>
+                                            </div>
+                                            <div class="calculator-card">
+                                                <input type="checkbox" id="added-service-calc" value="проводка" class="calculator-card__checkbox">
+                                                <p>Монтаж электропроводки</p>
+                                                <input type="number" id="provodka-calc__quanity" class="calculator-card__input-number">
+                                                <p>точка</p>
+                                            </div>
+                                            <div class="calculator-card">
+                                                <input type="checkbox" id="added-service-calc" value="труба" class="calculator-card__checkbox">
+                                                <p>Обход трубы с окантовкой</p>
+                                                <input type="number" id="truba-calc__quanity" class="calculator-card__input-number">
+                                                <p>шт.</p>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                        <button type="button" class="calculator-form__button_gray" onClick="calculator()">Рассчитать</button>
+                        <button type="button" class="calculator-form__button_gray"
+                            onClick="calculator()">Рассчитать</button>
                     </form>
                     <div>
                         <p class="calculator-form__text">Стоимость:</p>
@@ -429,20 +439,23 @@
             <div class="popup-close-block">
                 <a href="#"><img src="Фотографии/close.png" class="popup-close" alt="закрыть"></a>
             </div>
-            <div class="cover-popup">
-                <img src="Фотографии/zvezd.jpg" alt="Звёздное небо" class="popup-img">
+            <div class="cover-popup-block">
                 <div>
-                    <h1>Звёздное небо</h1>
-                    <h2>От 700 руб/м2</h2>
+                    <div class="cover-popup">
+                        <img src="Фотографии/zvezd.jpg" alt="Звёздное небо" class="popup-img">
+                        <div>
+                            <h1>Звёздное небо</h1>
+                            <h2>От 700 руб/м2</h2>
+                        </div>
+                    </div>
+                    <div class="popup-text">
+                        <p>Натяжные потолки с рисунком Звездного неба как дизайнерский прием существенно меняет атмосферу в
+                            жилых помещениях, кафе, ресторанах.</p>
+                        <p>Новый продукт в сфере оформления интерьеров представляет собой
+                            единую систему светодиодных источников света и виниловой пленки разного уровня прозрачности.</p>
+                    </div>
                 </div>
             </div>
-            <div class="popup-text">
-                <p>Натяжные потолки с рисунком Звездного неба как дизайнерский прием существенно меняет атмосферу в
-                    жилых помещениях, кафе, ресторанах.</p>
-                <p>Новый продукт в сфере оформления интерьеров представляет собой
-                    единую систему светодиодных источников света и виниловой пленки разного уровня прозрачности.</p>
-            </div>
-
         </div>
     </div>
     <div class="pvh-block_pop-up">
@@ -450,20 +463,24 @@
             <div class="popup-close-block">
                 <a href="#"><img src="Фотографии/close.png" class="popup-close" alt="закрыть"></a>
             </div>
-            <div class="cover-popup">
-                <img src="Фотографии/pvh.jpg" alt="Потолок из ПВХ материала" class="popup-img">
+            <div class="cover-popup-block">
                 <div>
-                    <h1>ПВХ</h1>
-                    <h2>От 500 руб/м2</h2>
+                    <div class="cover-popup">
+                        <img src="Фотографии/pvh.jpg" alt="Потолок из ПВХ материала" class="popup-img">
+                        <div>
+                            <h1>ПВХ</h1>
+                            <h2>От 500 руб/м2</h2>
+                        </div>
+                    </div>
+                    <div class="popup-text">
+                        <p>Пленка из поливинилхлорида делает потолок максимально гладким. Под воздействием высокой температуры
+                            жесткий ПВХ размягчается, становится эластичным и подходит для работы с любыми конструкциями.
+                            Остывающая пленка постепенно возвращает свой вид и хорошо скрывает все дефекты поверхности.</p>
+                        <p>ПВХ пленка не требует особого ухода и служит более 10 лет, без потери качеств и свойств. В случае
+                            если на нее попадает большое количество воды, она растягивается и выдерживает давление до 100 кг/м2.
+                        </p>
+                    </div>
                 </div>
-            </div>
-            <div class="popup-text">
-                <p>Пленка из поливинилхлорида делает потолок максимально гладким. Под воздействием высокой температуры
-                    жесткий ПВХ размягчается, становится эластичным и подходит для работы с любыми конструкциями.
-                    Остывающая пленка постепенно возвращает свой вид и хорошо скрывает все дефекты поверхности.</p>
-                <p>ПВХ пленка не требует особого ухода и служит более 10 лет, без потери качеств и свойств. В случае
-                    если на нее попадает большое количество воды, она растягивается и выдерживает давление до 100 кг/м2.
-                </p>
             </div>
         </div>
     </div>
@@ -473,19 +490,23 @@
             <div class="popup-close-block">
                 <a href="#"><img src="Фотографии/close.png" class="popup-close" alt="закрыть"></a>
             </div>
-            <div class="cover-popup">
-                <img src="Фотографии/tkan.jpg" alt="Тканевый потолок" class="popup-img">
+            <div class="cover-popup-block">
                 <div>
-                    <h1>Тканевые</h1>
-                    <h2>От 2 750 руб/м2</h2>
+                    <div class="cover-popup">
+                        <img src="Фотографии/tkan.jpg" alt="Тканевый потолок" class="popup-img">
+                        <div>
+                            <h1>Тканевые</h1>
+                            <h2>От 2 750 руб/м2</h2>
+                        </div>
+                    </div>
+                    <div class="popup-text">
+                        <p>Тканевые натяжные потолки — лучший способ быстро и стильно оформить интерьер с небольшими расходами
+                            сил и средств. </p>
+                        <p>Монтаж мастерами нашей компании производится в течение нескольких часов после раскроя полотен и
+                            профилей для каркаса.
+                        </p>
+                    </div>
                 </div>
-            </div>
-            <div class="popup-text">
-                <p>Тканевые натяжные потолки — лучший способ быстро и стильно оформить интерьер с небольшими расходами
-                    сил и средств. </p>
-                <p>Монтаж мастерами нашей компании производится в течение нескольких часов после раскроя полотен и
-                    профилей для каркаса.
-                </p>
             </div>
         </div>
     </div>
@@ -495,16 +516,20 @@
             <div class="popup-close-block">
                 <a href="#"><img src="Фотографии/close.png" class="popup-close" alt="закрыть"></a>
             </div>
-            <div class="cover-popup">
-                <img src="Фотографии/satin.png" alt="Сатиновый потолок" class="popup-img">
+            <div class="cover-popup-block">
                 <div>
-                    <h1>Сатиновые</h1>
-                    <h2>От 550 руб/м2</h2>
+                    <div class="cover-popup">
+                        <img src="Фотографии/satin.png" alt="Сатиновый потолок" class="popup-img">
+                        <div>
+                            <h1>Сатиновые</h1>
+                            <h2>От 550 руб/м2</h2>
+                        </div>
+                    </div>
+                    <div class="popup-text">
+                        <p>Сатиновые натяжные потолки имитируют поверхность шелковой ткани. Однако сатиновые полотна делают из
+                            ПВХ-пленки, золотая середина между глянцем и матовым материалом. </p>
+                    </div>
                 </div>
-            </div>
-            <div class="popup-text">
-                <p>Сатиновые натяжные потолки имитируют поверхность шелковой ткани. Однако сатиновые полотна делают из
-                    ПВХ-пленки, золотая середина между глянцем и матовым материалом. </p>
             </div>
         </div>
     </div>
@@ -514,20 +539,24 @@
             <div class="popup-close-block">
                 <a href="#"><img src="Фотографии/close.png" class="popup-close" alt="закрыть"></a>
             </div>
-            <div class="cover-popup">
-                <img src="Фотографии/matov.png" alt="Тканевый потолок" class="popup-img">
+            <div class="cover-popup-block">
                 <div>
-                    <h1>Матовые</h1>
-                    <h2>От 500 руб/м2</h2>
+                    <div class="cover-popup">
+                        <img src="Фотографии/matov.png" alt="Тканевый потолок" class="popup-img">
+                        <div>
+                            <h1>Матовые</h1>
+                            <h2>От 500 руб/м2</h2>
+                        </div>
+                    </div>
+                    <div class="popup-text">
+                        <p>Натяжные потолки с матовым покрытием визуально напоминают качественную побелку. На их поверхности нет
+                            швов, стыков или каких-либо неровностей. Особенность материала в минимальной светоотражающей
+                            способности. </p>
+                        <p>В зависимости от способа изготовления и структуры существует два типа полотен: тканевые матовые
+                            потолки и матовые ПВХ потолки. Узнайте об этом подробнее, связавшись с нами!
+                        </p>
+                    </div>
                 </div>
-            </div>
-            <div class="popup-text">
-                <p>Натяжные потолки с матовым покрытием визуально напоминают качественную побелку. На их поверхности нет
-                    швов, стыков или каких-либо неровностей. Особенность материала в минимальной светоотражающей
-                    способности. </p>
-                <p>В зависимости от способа изготовления и структуры существует два типа полотен: тканевые матовые
-                    потолки и матовые ПВХ потолки. Узнайте об этом подробнее, связавшись с нами!
-                </p>
             </div>
         </div>
     </div>
@@ -537,21 +566,25 @@
             <div class="popup-close-block">
                 <a href="#"><img src="Фотографии/close.png" class="popup-close" alt="закрыть"></a>
             </div>
-            <div class="cover-popup">
-                <img src="Фотографии/cvet.jpg" alt="Тканевый потолок" class="popup-img">
+            <div class="cover-popup-block">
                 <div>
-                    <h1>Цветные</h1>
-                    <h2>От 800 руб/м2</h2>
+                    <div class="cover-popup">
+                        <img src="Фотографии/cvet.jpg" alt="Тканевый потолок" class="popup-img">
+                        <div>
+                            <h1>Цветные</h1>
+                            <h2>От 800 руб/м2</h2>
+                        </div>
+                    </div>
+                    <div class="popup-text">
+                        <p>Цветной натяжной потолок – это не только яркие краски, но и вполне спокойные варианты приятных
+                            пастельных оттенков. Ведь все, что не относится к белому цвету, уже принято считать цветным.</p>
+                        <p>Удачное сочетание цветов в интерьере – залог стильного и эргономичного пространства. Ведь в любом
+                            помещении, будь то спальня вашего дома или переговорная в офисе, должно быть комфортно и приятно.
+                            Цвета не должны раздражать, быть слишком броскими или полностью перекликаться с отделкой стен и
+                            пола.
+                        </p>
+                    </div>
                 </div>
-            </div>
-            <div class="popup-text">
-                <p>Цветной натяжной потолок – это не только яркие краски, но и вполне спокойные варианты приятных
-                    пастельных оттенков. Ведь все, что не относится к белому цвету, уже принято считать цветным.</p>
-                <p>Удачное сочетание цветов в интерьере – залог стильного и эргономичного пространства. Ведь в любом
-                    помещении, будь то спальня вашего дома или переговорная в офисе, должно быть комфортно и приятно.
-                    Цвета не должны раздражать, быть слишком броскими или полностью перекликаться с отделкой стен и
-                    пола.
-                </p>
             </div>
         </div>
     </div>
@@ -561,19 +594,23 @@
             <div class="popup-close-block">
                 <a href="#"><img src="Фотографии/close.png" class="popup-close" alt="закрыть"></a>
             </div>
-            <div class="cover-popup">
-                <img src="Фотографии/glanc.jpg" alt="Тканевый потолок" class="popup-img">
+            <div class="cover-popup-block">
                 <div>
-                    <h1>Глянцевые</h1>
-                    <h2>От 600 руб/м2</h2>
+                    <div class="cover-popup">
+                        <img src="Фотографии/glanc.jpg" alt="Тканевый потолок" class="popup-img">
+                        <div>
+                            <h1>Глянцевые</h1>
+                            <h2>От 600 руб/м2</h2>
+                        </div>
+                    </div>
+                    <div class="popup-text">
+                        <p>Глянцевые натяжные потолки — хороший вариант отделки различных закрытых помещений без резких
+                            перепадов температур.</p>
+                        <p>Их полотна не ограничены в оттенках и позволяют наносить на поверхность фото или рисунки. По
+                            эксплуатационным свойствам они не уступают матовым и сатиновым аналогам.
+                        </p>
+                    </div>
                 </div>
-            </div>
-            <div class="popup-text">
-                <p>Глянцевые натяжные потолки — хороший вариант отделки различных закрытых помещений без резких
-                    перепадов температур.</p>
-                <p>Их полотна не ограничены в оттенках и позволяют наносить на поверхность фото или рисунки. По
-                    эксплуатационным свойствам они не уступают матовым и сатиновым аналогам.
-                </p>
             </div>
         </div>
     </div>

@@ -1,3 +1,31 @@
+//калькулятор
+if ('.calc-block_popup') {
+    $(document).ready(function ($) {
+        $('.popup-open-calc').click(function () {
+            $('.calc-block_popup').fadeIn();
+            return false;
+        });
+
+        $('.popup-close').click(function () {
+            $(this).parents('.calc-block_popup').fadeOut();
+            return false;
+        });
+
+        $(document).keydown(function (e) {
+            if (e.keyCode === 27) {
+                e.stopPropagation();
+                $('.calc-block_popup').fadeOut();
+            }
+        });
+
+        $('.calc-block_popup').click(function (e) {
+            if ($(e.target).closest('.popup').length == 0) {
+                $(this).fadeOut();
+            }
+        });
+    });
+}
+
 //Звёздное небо
 if ('.popup-open-stars') {
     $(document).ready(function ($) {
