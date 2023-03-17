@@ -525,15 +525,16 @@ body {
 .popup {
     position: fixed;
     top: 10%;
+    bottom: 10%;
     left: 20%;
     right: 20%;
+    height: floor(795.2px);
     width: auto;
     background: rgb(255, 255, 255);
     border-radius: 20px;
     box-shadow: 6px 10px 15px 5px rgb(48, 48, 48);
     z-index: 99999;
-    overflow-x: hidden;
-    height: 800px;
+    overflow: hidden;
 }
 
 .stars-block_pop-up,
@@ -567,15 +568,20 @@ body {
 }
 
 .cover-popup-block {
-    height: 800px - 70px;
+    height: 795px - 70px;
     display: flex;
     align-items: center;
+
+    .content-popup-block{
+        height: inherit;
+    }
 }
 
 .popup-close-block {
     display: flex;
     justify-content: right;
     align-items: center;
+    background-color: $mainBackground;
 
     .popup-close {
         margin: 10px;
@@ -660,7 +666,7 @@ body {
 
 .popup-text {
     font-size: $fontSizeText;
-    padding: 70px 38px;
+    padding: 70px 38px 0px;
 
     & p:last-child {
         margin-top: 40px;

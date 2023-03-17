@@ -416,15 +416,16 @@ body {
 .popup {
   position: fixed;
   top: 10%;
+  bottom: 10%;
   left: 20%;
   right: 20%;
+  height: 795px;
   width: auto;
   background: rgb(255, 255, 255);
   border-radius: 20px;
   box-shadow: 6px 10px 15px 5px rgb(48, 48, 48);
   z-index: 99999;
-  overflow-x: hidden;
-  height: 800px;
+  overflow: hidden;
 }
 
 .stars-block_pop-up,
@@ -458,15 +459,19 @@ body {
 }
 
 .cover-popup-block {
-  height: 730px;
+  height: 725px;
   display: flex;
   align-items: center;
+}
+.cover-popup-block .content-popup-block {
+  height: inherit;
 }
 
 .popup-close-block {
   display: flex;
   justify-content: right;
   align-items: center;
+  background-color: rgb(224, 224, 224);
 }
 .popup-close-block .popup-close {
   margin: 10px;
@@ -539,7 +544,7 @@ body {
 
 .popup-text {
   font-size: 27px;
-  padding: 70px 38px;
+  padding: 70px 38px 0px;
 }
 .popup-text p:last-child {
   margin-top: 40px;
