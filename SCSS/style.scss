@@ -256,13 +256,12 @@ body {
             justify-content: space-between;
             background-color: $blockBackground;
             box-shadow: $shadow;
-            padding: 80px;
+            padding: 80px - 20px 80px 80px;
             border-radius: $borderRadius;
         }
 
         .review {
-            width: 260px;
-            font-size: $fontSizeText;
+            font-size: $fontSizeHeader;
         }
 
         .review__title_30px {
@@ -280,7 +279,10 @@ body {
         .review__text_27px {
             background: $backgroundReview;
             padding: 30px;
-            height: 320px;
+            width: 290px;
+            height: 370px;
+            display: flex;
+            align-items: center;
             border-radius: 20px;
             text-align: center;
         }
