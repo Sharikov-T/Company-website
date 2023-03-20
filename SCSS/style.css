@@ -62,15 +62,23 @@ body {
   padding: 15px;
   border-radius: 40px;
   font-size: 30px;
+  transition: 0.3s;
+}
+.cover .cover-block .title-and-button .button-block1__button_border:hover {
+  border-radius: 15px;
 }
 .cover .cover-block .title-and-button .button-block2__button_no-border {
   border: 3px solid black;
   padding: 15px;
   border-radius: 40px;
   font-size: 30px;
+  transition: 0.3s;
   background-color: black;
-  margin-left: 10px;
+  margin-left: 15px;
   color: rgb(224, 224, 224);
+}
+.cover .cover-block .title-and-button .button-block2__button_no-border:hover {
+  border-radius: 15px;
 }
 .cover .cover-block .image-block {
   animation: image-block 1.5s ease-out forwards;
@@ -343,6 +351,10 @@ body {
   font-size: 27px;
   -webkit-text-decoration: underline 1px;
           text-decoration: underline 1px;
+  transition: 0.3s;
+}
+.contact .contact-card .contact-card__link:hover {
+  color: #666666;
 }
 
 .footer {
@@ -379,6 +391,11 @@ body {
 }
 .footer .contact-footer-image-block_flex .contact-footer-image-block__image {
   width: 50px;
+  border-radius: 50%;
+  transition: 0.3s;
+}
+.footer .contact-footer-image-block_flex .contact-footer-image-block__image:hover {
+  background-color: rgb(170, 170, 170);
 }
 .footer .contact-footer-image-block_flex .contact-card__image1 {
   animation: img-contact-footer1 3.5s infinite;

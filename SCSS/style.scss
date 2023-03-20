@@ -20,6 +20,10 @@ $widthGridPrice: 1100px;
     padding: 15px;
     border-radius: $borderRadius;
     font-size: 30px;
+    transition: $transition;
+    &:hover{
+        border-radius: 15px;
+    }
 }
 
 @mixin inputStyle($backgroundInput) {
@@ -132,7 +136,7 @@ body {
             .button-block2__button_no-border {
                 @include buttonCover();
                 background-color: black;
-                margin-left: 10px;
+                margin-left: 15px;
                 color: rgb(224, 224, 224);
             }
         }
@@ -421,6 +425,10 @@ body {
         .contact-card__link {
             font-size: $fontSizeText;
             text-decoration: underline 1px;
+            transition: $transition;
+            &:hover{
+                color: $colorHoverLink;
+            }
         }
     }
 }
@@ -466,6 +474,11 @@ body {
 
         .contact-footer-image-block__image {
             width: 50px;
+            border-radius: 50%;
+            transition: $transition;
+            &:hover {
+                background-color: $blockBackground;
+            }
         }
 
         .contact-card__image1 {
