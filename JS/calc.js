@@ -51,3 +51,52 @@ function calculator() {
     }
     document.getElementById('priceCalc').innerHTML = `${cost} руб.`;
 }
+
+document.addEventListener('input', function (e) {
+    let inp = e.target,
+        parent = inp.closest('.calculator-card'),
+        type = inp.type,
+        box;
+    /*
+    Если найден родитель
+    */
+    if (parent) {
+        /*
+        Проверяем тип основного элемента.
+        Если это checkbox - одно действие
+        Если это number - другое действие
+        */
+        switch (type) {
+            case 'checkbox':
+                box = parent.querySelector('[type="number"]');
+                /*
+                Если найден <input type="number">
+                */
+                if (box) {
+                    box.value = inp.checked ? 1 : 0;
+                }
+                break;
+            case 'number':
+                box = parent.querySelector('[type="checkbox"]');
+                /*
+                Если найден <input type="checkbox">
+                */
+                if (box) {
+                    let val = parseInt(inp.value);
+                    /* 
+                    Если value больше нуля, то переводим checkbox в активное состояние,
+                    если нет, то в противоположное состояние.
+                    Устанавливаем значение value у входного <input type="number">
+                    */
+                    (val > 0) ? (
+                        inp.value = val,
+                        box.checked = true
+                    ) : (
+                        inp.value = 0,
+                        box.checked = false
+                    );
+                }
+                break;
+        }
+    }
+})
