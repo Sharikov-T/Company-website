@@ -21,7 +21,8 @@ $widthGridPrice: 1100px;
     border-radius: $borderRadius;
     font-size: 30px;
     transition: $transition;
-    &:hover{
+
+    &:hover {
         border-radius: 15px;
     }
 }
@@ -232,6 +233,7 @@ body {
 
         .swiper-button-next {
             @include buttonSwiper();
+
             &:hover {
                 transform: scale($scaleHover);
             }
@@ -239,6 +241,7 @@ body {
 
         .swiper-button-prev {
             @include buttonSwiper();
+
             &:hover {
                 transform: scale($scaleHover);
             }
@@ -320,7 +323,7 @@ body {
 
         .service-card {
             @include serviceCard();
-            height: 190px;
+            height: 180px;
 
             &:hover {
                 background-color: $blockBackground;
@@ -340,7 +343,7 @@ body {
             transition: $transition;
 
             &:hover {
-                color: $colorHoverLink;
+                border-radius: 15px;
             }
         }
 
@@ -354,7 +357,7 @@ body {
 
         .service-card_h-auto {
             @include serviceCard();
-
+            height: fit-content;
             &:hover {
                 background-color: $blockBackground;
             }
@@ -426,7 +429,8 @@ body {
             font-size: $fontSizeText;
             text-decoration: underline 1px;
             transition: $transition;
-            &:hover{
+
+            &:hover {
                 color: $colorHoverLink;
             }
         }
@@ -476,6 +480,7 @@ body {
             width: 50px;
             border-radius: 50%;
             transition: $transition;
+
             &:hover {
                 background-color: $blockBackground;
             }

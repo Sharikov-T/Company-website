@@ -239,7 +239,7 @@ body {
   padding: 20px;
   border-radius: 20px;
   transition: 0.3s;
-  height: 190px;
+  height: 180px;
 }
 .price-list .price-list-block .service-card:hover {
   background-color: rgb(170, 170, 170);
@@ -256,7 +256,7 @@ body {
   transition: 0.3s;
 }
 .price-list .price-list-block .service-card__button_pop-up:hover {
-  color: #666666;
+  border-radius: 15px;
 }
 .price-list .price-list-block .price-of-added-service_grid {
   display: grid;
@@ -270,6 +270,8 @@ body {
   padding: 20px;
   border-radius: 20px;
   transition: 0.3s;
+  height: -moz-fit-content;
+  height: fit-content;
 }
 .price-list .price-list-block .service-card_h-auto:hover {
   background-color: rgb(170, 170, 170);
