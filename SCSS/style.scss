@@ -98,9 +98,19 @@ body {
     }
 }
 
+.main_flex {
+    display: flex;
+    justify-content: center;
+}
+
+main {
+    max-width: 1400px;
+}
+
+
 .cover {
     .cover-block {
-        padding: 50px 250px 0px;
+        padding: 50px 0px 0px;
         display: flex;
         justify-content: space-between;
         align-items: center;
@@ -174,7 +184,7 @@ body {
 
 .about-us {
     .about-us-block {
-        @include sectionPadding(200px, 250px, 0px, 250px);
+        @include sectionPadding(200px, 0px, 0px, 0px);
 
         .description-company__text_27px {
             font-size: $fontSizeText;
@@ -198,7 +208,7 @@ body {
     }
 
     .advantages-block {
-        @include sectionPadding(200px, 250px, 0px, 250px);
+        @include sectionPadding(200px, 0px, 0px, 0px);
 
         .advantages_grid {
             border-left: 3px red solid;
@@ -214,7 +224,7 @@ body {
     }
 
     .photos-work-block {
-        @include sectionPadding(200px, 250px, 0px, 250px);
+        @include sectionPadding(200px, 0px, 0px, 0px);
         position: relative;
 
         .swiper {
@@ -256,7 +266,7 @@ body {
     }
 
     .reviews-block {
-        @include sectionPadding(200px, 250px, 0px, 250px);
+        @include sectionPadding(200px, 0px, 0px, 0px);
 
         .reviews {
             display: flex;
@@ -297,7 +307,7 @@ body {
 }
 
 .price-list {
-    @include sectionPadding(200px, 250px, 0px, 250px);
+    @include sectionPadding(200px, 0px, 0px, 0px);
 
 
     .price-list-block {
@@ -366,11 +376,12 @@ body {
 }
 
 .calculator {
-    @include sectionPadding(100px, 250px, 100px, 250px);
+    @include sectionPadding(100px, 30px, 100px, 30px);
     margin-top: 200px;
-    width: 100%;
     background-color: $blockBackground;
-
+    border-radius: $borderRadius;
+    box-shadow: $shadow;
+    
     .calculator_flex {
         display: flex;
         justify-content: space-between;
@@ -406,7 +417,7 @@ body {
 }
 
 .contact {
-    @include sectionPadding(200px, 250px, 200px, 250px);
+    @include sectionPadding(200px, 0px, 200px, 0px);
 
     .contact-block {
         display: flex;
