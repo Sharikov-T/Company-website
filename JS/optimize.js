@@ -1,30 +1,10 @@
-if (document.documentElement.clientWidth < 415) {
-    var menuButton = document.querySelector('.menu-button');
-    var openMenu = function () {
-        swiper.slidePrev();
-    };
-    var swiper = new Swiper('.swiper', {
-        slidesPerView: 'auto',
-        initialSlide: 1,
-        resistanceRatio: 0,
-        slideToClickedSlide: true,
-        on: {
-            slideChangeTransitionStart: function () {
-                var slider = this;
-                if (slider.activeIndex === 0) {
-                    menuButton.classList.add('cross');
-                    // required because of slideToClickedSlide
-                    menuButton.removeEventListener('click', openMenu, true);
-                } else {
-                    menuButton.classList.remove('cross');
-                }
-            },
-            slideChangeTransitionEnd: function () {
-                var slider = this;
-                if (slider.activeIndex === 1) {
-                    menuButton.addEventListener('click', openMenu, true);
-                }
-            },
-        },
-    });
-}
+let menuBtn = document.querySelector('.menu-btn');
+let menu = document.querySelector('.menu');
+menuBtn.addEventListener('click', function(){
+	menu.classList.add('active');
+})
+
+let menuClose = document.querySelector('.menu-close')
+menuClose.addEventListener('click', function name(params) {
+	menu.classList.remove('active');
+})
