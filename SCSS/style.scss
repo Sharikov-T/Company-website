@@ -911,7 +911,8 @@ $widthGridPrice: 1100px;
     }
 
     main {
-        max-width: 415px;
+        max-width: 615px;
+        overflow-x: hidden;
     }
 
 
@@ -923,7 +924,7 @@ $widthGridPrice: 1100px;
                 z-index: 2;
                 position: relative;
                 top: 260px;
-                left: 70px;
+                left: 80px;
                 background: rgba(0, 0, 0, 0.5);
                 padding: 20px;
                 color: $mainBackground;
@@ -967,10 +968,13 @@ $widthGridPrice: 1100px;
             .image-block {
                 z-index: 0;
                 position: relative;
-                bottom: 300px;
+                bottom: 420px;
             }
 
             .image-block__image_bbl-radius200px {
+                position: relative;
+                right: 50px;
+                height: 750px;
             }
         }
     }
@@ -1259,6 +1263,7 @@ $widthGridPrice: 1100px;
         justify-content: space-between;
         align-items: center;
         font-size: $fontSizeHeader;
+        overflow-x: hidden;
 
         .logo-footer__text {
             &:last-child {

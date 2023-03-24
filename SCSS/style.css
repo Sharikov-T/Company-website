@@ -636,7 +636,8 @@
     justify-content: center;
   }
   main {
-    max-width: 415px;
+    max-width: 615px;
+    overflow-x: hidden;
   }
   .cover .cover-block {
     padding: 50px 0px 0px;
@@ -645,7 +646,7 @@
     z-index: 2;
     position: relative;
     top: 260px;
-    left: 70px;
+    left: 80px;
     background: rgba(0, 0, 0, 0.5);
     padding: 20px;
     color: rgb(224, 224, 224);
@@ -696,7 +697,12 @@
   .cover .cover-block .image-block {
     z-index: 0;
     position: relative;
-    bottom: 300px;
+    bottom: 420px;
+  }
+  .cover .cover-block .image-block__image_bbl-radius200px {
+    position: relative;
+    right: 50px;
+    height: 750px;
   }
   .subtitle {
     text-align: center;
@@ -965,6 +971,7 @@
     justify-content: space-between;
     align-items: center;
     font-size: 20px;
+    overflow-x: hidden;
   }
   .footer .logo-footer__text:last-child {
     margin-top: 10px;
