@@ -21,7 +21,8 @@ $widthGridPrice: 1100px;
     border-radius: $borderRadius;
     font-size: 30px;
     transition: $transition;
-    &:hover{
+
+    &:hover {
         border-radius: 15px;
     }
 }
@@ -97,9 +98,19 @@ body {
     }
 }
 
+.main_flex {
+    display: flex;
+    justify-content: center;
+}
+
+main {
+    max-width: 1400px;
+}
+
+
 .cover {
     .cover-block {
-        padding: 50px 250px 0px;
+        padding: 50px 0px 0px;
         display: flex;
         justify-content: space-between;
         align-items: center;
@@ -173,7 +184,7 @@ body {
 
 .about-us {
     .about-us-block {
-        @include sectionPadding(200px, 250px, 0px, 250px);
+        @include sectionPadding(200px, 0px, 0px, 0px);
 
         .description-company__text_27px {
             font-size: $fontSizeText;
@@ -197,7 +208,7 @@ body {
     }
 
     .advantages-block {
-        @include sectionPadding(200px, 250px, 0px, 250px);
+        @include sectionPadding(200px, 0px, 0px, 0px);
 
         .advantages_grid {
             border-left: 3px red solid;
@@ -213,7 +224,7 @@ body {
     }
 
     .photos-work-block {
-        @include sectionPadding(200px, 250px, 0px, 250px);
+        @include sectionPadding(200px, 0px, 0px, 0px);
         position: relative;
 
         .swiper {
@@ -232,6 +243,7 @@ body {
 
         .swiper-button-next {
             @include buttonSwiper();
+
             &:hover {
                 transform: scale($scaleHover);
             }
@@ -239,6 +251,7 @@ body {
 
         .swiper-button-prev {
             @include buttonSwiper();
+
             &:hover {
                 transform: scale($scaleHover);
             }
@@ -253,7 +266,7 @@ body {
     }
 
     .reviews-block {
-        @include sectionPadding(200px, 250px, 0px, 250px);
+        @include sectionPadding(200px, 0px, 0px, 0px);
 
         .reviews {
             display: flex;
@@ -294,7 +307,7 @@ body {
 }
 
 .price-list {
-    @include sectionPadding(200px, 250px, 0px, 250px);
+    @include sectionPadding(200px, 0px, 0px, 0px);
 
 
     .price-list-block {
@@ -320,7 +333,7 @@ body {
 
         .service-card {
             @include serviceCard();
-            height: 190px;
+            height: 180px;
 
             &:hover {
                 background-color: $blockBackground;
@@ -340,7 +353,7 @@ body {
             transition: $transition;
 
             &:hover {
-                color: $colorHoverLink;
+                border-radius: 15px;
             }
         }
 
@@ -354,7 +367,7 @@ body {
 
         .service-card_h-auto {
             @include serviceCard();
-
+            height: fit-content;
             &:hover {
                 background-color: $blockBackground;
             }
@@ -363,11 +376,12 @@ body {
 }
 
 .calculator {
-    @include sectionPadding(100px, 250px, 100px, 250px);
+    @include sectionPadding(100px, 30px, 100px, 30px);
     margin-top: 200px;
-    width: 100%;
     background-color: $blockBackground;
-
+    border-radius: $borderRadius;
+    box-shadow: $shadow;
+    
     .calculator_flex {
         display: flex;
         justify-content: space-between;
@@ -403,7 +417,7 @@ body {
 }
 
 .contact {
-    @include sectionPadding(200px, 250px, 200px, 250px);
+    @include sectionPadding(200px, 0px, 200px, 0px);
 
     .contact-block {
         display: flex;
@@ -426,7 +440,8 @@ body {
             font-size: $fontSizeText;
             text-decoration: underline 1px;
             transition: $transition;
-            &:hover{
+
+            &:hover {
                 color: $colorHoverLink;
             }
         }
@@ -476,6 +491,7 @@ body {
             width: 50px;
             border-radius: 50%;
             transition: $transition;
+
             &:hover {
                 background-color: $blockBackground;
             }

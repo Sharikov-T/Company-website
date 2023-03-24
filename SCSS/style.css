@@ -30,8 +30,17 @@ body {
   font-size: 20px;
 }
 
+.main_flex {
+  display: flex;
+  justify-content: center;
+}
+
+main {
+  max-width: 1400px;
+}
+
 .cover .cover-block {
-  padding: 50px 250px 0px;
+  padding: 50px 0px 0px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -105,7 +114,7 @@ body {
 }
 
 .about-us .about-us-block {
-  padding: 200px 250px 0px 250px;
+  padding: 200px 0px 0px 0px;
 }
 .about-us .about-us-block .description-company__text_27px {
   font-size: 27px;
@@ -125,7 +134,7 @@ body {
   border-radius: 50%;
 }
 .about-us .advantages-block {
-  padding: 200px 250px 0px 250px;
+  padding: 200px 0px 0px 0px;
 }
 .about-us .advantages-block .advantages_grid {
   border-left: 3px red solid;
@@ -138,7 +147,7 @@ body {
   font-size: 27px;
 }
 .about-us .photos-work-block {
-  padding: 200px 250px 0px 250px;
+  padding: 200px 0px 0px 0px;
   position: relative;
 }
 .about-us .photos-work-block .swiper {
@@ -178,7 +187,7 @@ body {
   padding: 5px 0px;
 }
 .about-us .reviews-block {
-  padding: 200px 250px 0px 250px;
+  padding: 200px 0px 0px 0px;
 }
 .about-us .reviews-block .reviews {
   display: flex;
@@ -215,7 +224,7 @@ body {
 }
 
 .price-list {
-  padding: 200px 250px 0px 250px;
+  padding: 200px 0px 0px 0px;
 }
 .price-list .price-list-block .subtitle-in-price_mt20 {
   font-size: 34px;
@@ -239,7 +248,7 @@ body {
   padding: 20px;
   border-radius: 20px;
   transition: 0.3s;
-  height: 190px;
+  height: 180px;
 }
 .price-list .price-list-block .service-card:hover {
   background-color: rgb(170, 170, 170);
@@ -256,7 +265,7 @@ body {
   transition: 0.3s;
 }
 .price-list .price-list-block .service-card__button_pop-up:hover {
-  color: #666666;
+  border-radius: 15px;
 }
 .price-list .price-list-block .price-of-added-service_grid {
   display: grid;
@@ -270,16 +279,19 @@ body {
   padding: 20px;
   border-radius: 20px;
   transition: 0.3s;
+  height: -moz-fit-content;
+  height: fit-content;
 }
 .price-list .price-list-block .service-card_h-auto:hover {
   background-color: rgb(170, 170, 170);
 }
 
 .calculator {
-  padding: 100px 250px 100px 250px;
+  padding: 100px 30px 100px 30px;
   margin-top: 200px;
-  width: 100%;
   background-color: rgb(170, 170, 170);
+  border-radius: 40px;
+  box-shadow: 6px 10px 15px 5px rgb(141, 141, 141);
 }
 .calculator .calculator_flex {
   display: flex;
@@ -331,7 +343,7 @@ body {
 }
 
 .contact {
-  padding: 200px 250px 200px 250px;
+  padding: 200px 0px 200px 0px;
 }
 .contact .contact-block {
   display: flex;
