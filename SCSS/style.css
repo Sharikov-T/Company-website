@@ -558,7 +558,8 @@
     font-size: 20px;
   }
   .menu-btn {
-    width: 30px;
+    width: -moz-fit-content;
+    width: fit-content;
     height: 30px;
     position: relative;
     z-index: 2;
@@ -612,7 +613,7 @@
   .menu li {
     list-style-type: none;
     padding-bottom: 20px;
-    font-size: 27px;
+    font-size: 20px;
   }
   .menu li:last-child {
     padding: 0;
@@ -639,8 +640,8 @@
     max-width: 615px;
     overflow-x: hidden;
   }
-  .cover .cover-block {
-    padding: 50px 0px 0px;
+  .cover {
+    max-height: 581px;
   }
   .cover .cover-block .title-and-button {
     z-index: 2;
@@ -697,30 +698,29 @@
   .cover .cover-block .image-block {
     z-index: 0;
     position: relative;
-    bottom: 420px;
+    bottom: 250px;
   }
   .cover .cover-block .image-block__image_bbl-radius200px {
     position: relative;
-    right: 50px;
-    height: 750px;
   }
   .subtitle {
     text-align: center;
     margin-bottom: 35px;
     font-weight: bolder;
-    font-size: 42px;
+    font-size: 32px;
   }
   .about-us .about-us-block {
-    padding: 200px 0px 0px 0px;
+    padding: 80px 20px 0px 20px;
   }
   .about-us .about-us-block .description-company__text_27px {
-    font-size: 27px;
+    font-size: 20px;
   }
   .about-us .about-us-block .statistics-list_flex {
-    font-size: 27px;
+    font-size: 20px;
     display: flex;
-    justify-content: space-between;
+    flex-direction: column;
     align-items: center;
+    gap: 15px;
     margin: 40px 0px;
   }
   .about-us .about-us-block span {
@@ -731,7 +731,7 @@
     border-radius: 50%;
   }
   .about-us .advantages-block {
-    padding: 200px 0px 0px 0px;
+    padding: 80px 20px 0px 20px;
   }
   .about-us .advantages-block .advantages_grid {
     border-left: 3px red solid;
@@ -741,41 +741,28 @@
     padding-left: 27px;
   }
   .about-us .advantages-block .advantages_grid .advantages__text_27px {
-    font-size: 27px;
+    font-size: 20px;
   }
   .about-us .photos-work-block {
-    padding: 200px 0px 0px 0px;
+    padding: 80px 20px 0px 20px;
     position: relative;
   }
   .about-us .photos-work-block .swiper {
-    width: 1000px;
+    max-width: 615px;
     border-radius: 40px;
     box-shadow: 6px 10px 15px 5px rgb(141, 141, 141);
-    height: 600px;
+    height: 250px;
   }
   .about-us .photos-work-block .swiper-slide img {
     width: 100%;
+    height: 100%;
     display: block;
   }
   .about-us .photos-work-block .swiper-button-next {
-    transition: 0.3s;
-    color: rgb(224, 224, 224);
-    height: 40px;
-    border-radius: 50%;
-    overflow: hidden;
-  }
-  .about-us .photos-work-block .swiper-button-next:hover {
-    transform: scale(1.1);
+    display: none;
   }
   .about-us .photos-work-block .swiper-button-prev {
-    transition: 0.3s;
-    color: rgb(224, 224, 224);
-    height: 40px;
-    border-radius: 50%;
-    overflow: hidden;
-  }
-  .about-us .photos-work-block .swiper-button-prev:hover {
-    transform: scale(1.1);
+    display: none;
   }
   .about-us .photos-work-block .swiper-pagination {
     position: absolute;
@@ -784,21 +771,24 @@
     padding: 5px 0px;
   }
   .about-us .reviews-block {
-    padding: 200px 0px 0px 0px;
+    padding: 80px 20px 0px 20px;
   }
   .about-us .reviews-block .reviews {
     display: flex;
     justify-content: space-between;
     background-color: rgb(170, 170, 170);
     box-shadow: 6px 10px 15px 5px rgb(141, 141, 141);
-    padding: 60px 80px 80px;
+    padding: 10px 10px 10px;
     border-radius: 40px;
+    position: relative;
+    height: 520px;
   }
   .about-us .reviews-block .review {
+    display: none;
     font-size: 20px;
   }
   .about-us .reviews-block .review__title_30px {
-    font-size: 30px;
+    font-size: 25px;
     padding: 10px;
     border-radius: 20px;
     position: relative;
@@ -811,13 +801,24 @@
   }
   .about-us .reviews-block .review__text_27px {
     background: rgb(224, 224, 224);
-    padding: 30px;
+    padding: 10px;
     width: 290px;
     height: 370px;
     display: flex;
     align-items: center;
     border-radius: 20px;
     text-align: center;
+  }
+  swiper-container {
+    width: 300px;
+    height: 500px;
+    position: absolute;
+    left: 50%;
+    margin-left: -150px;
+  }
+  swiper-slide {
+    background-position: center;
+    background-size: cover;
   }
   .price-list {
     padding: 200px 0px 0px 0px;
@@ -894,7 +895,7 @@
     align-items: center;
   }
   .calculator .calculator-form__text {
-    font-size: 27px;
+    font-size: 20px;
   }
   .calculator .calculator-form__select_shadow {
     width: 500px;
@@ -950,11 +951,11 @@
     width: 170px;
   }
   .contact .contact-card .contact-card__text {
-    font-size: 27px;
+    font-size: 20px;
     margin: 18px 0px;
   }
   .contact .contact-card .contact-card__link {
-    font-size: 27px;
+    font-size: 20px;
     -webkit-text-decoration: underline 1px;
             text-decoration: underline 1px;
     transition: 0.3s;
@@ -1121,7 +1122,7 @@
     box-shadow: 6px 10px 15px 5px rgb(141, 141, 141);
   }
   .popup-text {
-    font-size: 27px;
+    font-size: 20px;
     padding: 70px 38px;
   }
   .popup-text p:last-child {
