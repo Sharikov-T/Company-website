@@ -755,8 +755,8 @@ $widthGridPrice: 1100px;
     }
 
     @mixin serviceCard() {
-        font-size: 23px;
-        padding: 20px;
+        font-size: 20px;
+        padding: 18px;
         border-radius: 20px;
         transition: $transition;
     }
@@ -1119,10 +1119,10 @@ $widthGridPrice: 1100px;
 
         .price-list-block {
             .subtitle-in-price_mt20 {
-                font-size: 34px;
+                font-size: 27px;
                 position: relative;
-                left: 250px;
-                margin-top: 100px;
+                left: 60px;
+                margin-top: 50px;
             }
 
             .price_flex {
@@ -1132,8 +1132,8 @@ $widthGridPrice: 1100px;
 
             .price-of-ceilings_grid {
                 display: grid;
-                grid-template: repeat(2, 1fr) / repeat(4, 1fr);
-                gap: 50px;
+                grid-template: repeat(4, .5fr) / repeat(2, .5fr);
+                gap: 20px;
                 padding-top: 20px;
                 width: $widthGridPrice;
             }
@@ -1141,10 +1141,6 @@ $widthGridPrice: 1100px;
             .service-card {
                 @include serviceCard();
                 height: 180px;
-
-                &:hover {
-                    background-color: $blockBackground;
-                }
             }
 
             .service-card__subtitle {
@@ -1159,7 +1155,7 @@ $widthGridPrice: 1100px;
                 border-radius: $borderRadius;
                 transition: $transition;
 
-                &:hover {
+                &:focus {
                     border-radius: 15px;
                 }
             }
@@ -1175,10 +1171,6 @@ $widthGridPrice: 1100px;
             .service-card_h-auto {
                 @include serviceCard();
                 height: fit-content;
-
-                &:hover {
-                    background-color: $blockBackground;
-                }
             }
         }
     }

@@ -820,10 +820,10 @@
     padding: 200px 0px 0px 0px;
   }
   .price-list .price-list-block .subtitle-in-price_mt20 {
-    font-size: 34px;
+    font-size: 27px;
     position: relative;
-    left: 250px;
-    margin-top: 100px;
+    left: 60px;
+    margin-top: 50px;
   }
   .price-list .price-list-block .price_flex {
     display: flex;
@@ -831,20 +831,17 @@
   }
   .price-list .price-list-block .price-of-ceilings_grid {
     display: grid;
-    grid-template: repeat(2, 1fr)/repeat(4, 1fr);
-    gap: 50px;
+    grid-template: repeat(4, 0.5fr)/repeat(2, 0.5fr);
+    gap: 20px;
     padding-top: 20px;
     width: 1100px;
   }
   .price-list .price-list-block .service-card {
-    font-size: 23px;
-    padding: 20px;
+    font-size: 20px;
+    padding: 18px;
     border-radius: 20px;
     transition: 0.3s;
     height: 180px;
-  }
-  .price-list .price-list-block .service-card:hover {
-    background-color: rgb(170, 170, 170);
   }
   .price-list .price-list-block .service-card__subtitle {
     padding-top: 15px;
@@ -857,7 +854,7 @@
     border-radius: 40px;
     transition: 0.3s;
   }
-  .price-list .price-list-block .service-card__button_pop-up:hover {
+  .price-list .price-list-block .service-card__button_pop-up:focus {
     border-radius: 15px;
   }
   .price-list .price-list-block .price-of-added-service_grid {
@@ -868,15 +865,12 @@
     width: 1100px;
   }
   .price-list .price-list-block .service-card_h-auto {
-    font-size: 23px;
-    padding: 20px;
+    font-size: 20px;
+    padding: 18px;
     border-radius: 20px;
     transition: 0.3s;
     height: -moz-fit-content;
     height: fit-content;
-  }
-  .price-list .price-list-block .service-card_h-auto:hover {
-    background-color: rgb(170, 170, 170);
   }
   .calculator {
     padding: 100px 30px 100px 30px;
