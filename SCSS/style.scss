@@ -1162,15 +1162,16 @@ $widthGridPrice: 1100px;
 
             .price-of-added-service_grid {
                 display: grid;
-                grid-template: repeat(3, 1fr) / repeat(3, 1fr);
-                gap: 50px;
+                grid-template: repeat(4, 1fr) / repeat(2, 1fr);
+                gap: 10px;
                 padding-top: 20px;
                 width: $widthGridPrice;
             }
 
             .service-card_h-auto {
                 @include serviceCard();
-                height: fit-content;
+                height: auto;
+                width: 150px;
             }
         }
     }
